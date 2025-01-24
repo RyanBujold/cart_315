@@ -2,6 +2,9 @@
 
 ## Tiny Game | 23/01/2025
 ![game screenshot](./Media/unlok_screenshot.png)
+
+[Game Link](../Projects/UnLok.html)
+
 ### Thoughts:
 - I decided to do a puzzle game with puzzle script engine since I found the game "bloom" very enjoyable to mess around with
 - I somehow managed to make the editor stop working
