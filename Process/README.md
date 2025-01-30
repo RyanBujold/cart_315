@@ -22,3 +22,6 @@
 ### Playtest notes: 
 - everyone liked the game and found it very challenging
 - Someone who likes puzzle games specifically really enjoyed it
+
+## Exploration Prototype 1
+- I forgot to work on this. I think that my goals going forward will be to not forget again and mess around to find something interesting to turn the prototype into. 
