@@ -146,6 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3794d04cb6a438789e65d3dd5f8d85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddleSpeed: 0.05
+  paddleSpeed: 8
   topWall: 4
   bottomWall: -4
+  upKey: 0
+  downKey: 0

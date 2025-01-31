@@ -16,15 +16,15 @@ public class PaddleScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKey(downKey)) {
+        if (Input.GetKey(downKey) && yPos > bottomWall) {
             if (yPos > bottomWall) {
-                yPos -= paddleSpeed;
+                yPos -= paddleSpeed * Time.deltaTime;
             }
         }
 
-        if (Input.GetKey(upKey)) {
+        if (Input.GetKey(upKey) && yPos < topWall) {
             if (yPos < topWall) {
-                yPos += paddleSpeed;
+                yPos += paddleSpeed * Time.deltaTime;
             }
         }
 

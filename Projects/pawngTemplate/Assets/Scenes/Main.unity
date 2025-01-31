@@ -333,6 +333,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8538361129468675970, guid: 6849af7e848c34ce2aca6d9bdc9c327d,
         type: 3}
+      propertyPath: Ball
+      value: 
+      objectReference: {fileID: 1541880279}
+    - target: {fileID: 8538361129468675970, guid: 6849af7e848c34ce2aca6d9bdc9c327d,
+        type: 3}
       propertyPath: upKey
       value: 112
       objectReference: {fileID: 0}
@@ -869,6 +874,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8538361129468675970, guid: 6849af7e848c34ce2aca6d9bdc9c327d,
+        type: 3}
+      propertyPath: Ball
+      value: 
+      objectReference: {fileID: 1541880279}
     - target: {fileID: 8538361129468675970, guid: 6849af7e848c34ce2aca6d9bdc9c327d,
         type: 3}
       propertyPath: upKey

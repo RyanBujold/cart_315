@@ -25,3 +25,8 @@
 
 ## Exploration Prototype 1
 - I forgot to work on this. I think that my goals going forward will be to not forget again and mess around to find something interesting to turn the prototype into. 
+
+## Exploration Prototype 2
+- Starting with the pong template
+- Modified the paddle's movement to scale to time passed (delta time)
+- Thinking about the game "Cube Slam" and how it made pong fun and interesting. Might steal some ideas from it
