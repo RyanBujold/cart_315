@@ -30,3 +30,7 @@
 - Starting with the pong template
 - Modified the paddle's movement to scale to time passed (delta time)
 - Thinking about the game "Cube Slam" and how it made pong fun and interesting. Might steal some ideas from it
+- I made a new script for an AI paddle opponent that simply follows where the ball goes. This would mimic "Cube Slam"'s opponent.
+- Next I started implementing moving walls. There was trouble when on start, it kept placing the object at the orgin instead of where I defined it.
+- After some detective work, I found that my code was reseting the position to (0,0,0) on the first frame because the initial x and y position that were 
+being used in the transform were starting at 0.
