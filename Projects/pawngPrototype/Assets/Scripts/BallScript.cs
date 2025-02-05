@@ -69,6 +69,31 @@ public class BallScript : MonoBehaviour
             // make pitch higher
             blip.pitch = 1f;
             blip.Play();
+
+            // change travel tragectory
+            float paddleY = other.transform.position.y;
+            float ballY = this.transform.position.y;
+
+            // Get our angle
+            bool isGoingUp = true;
+            float a = ballY - paddleY;
+            if(a < 0) {
+                a = a * -1;
+                isGoingUp = false;
+            }
+            // Get our ball speed
+            float s = rb.velocity.x + rb.velocity.y;
+
+            // Determine the new x velocity
+            float velX = s / (a + 1);
+            // Determine the new y velociy
+            float velY = (a * s)/(a + 1);
+            if(!isGoingUp) {
+                velY = velY * -1;
+            }
+
+            rb.velocity = new Vector3(velX, velY, 0);
+
             SpeedCheck();
         }
         
