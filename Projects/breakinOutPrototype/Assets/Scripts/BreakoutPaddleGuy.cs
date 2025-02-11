@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BreakoutPaddle : MonoBehaviour {
+public class BreakoutPaddleGuy : MonoBehaviour {
     private float     xPos;
+    private float     yPos;
+    private Rigidbody2D rb;
     public float      paddleSpeed = 10f;
-    public float      leftWall, rightWall;
+    private float jumpHeight = 5f;
+    public float      leftWall, rightWall, bottomWall;
 
-    public KeyCode leftKey, rightKey;
+    public KeyCode leftKey, rightKey, jumpUpKey, jumpDownKey;
 
     // Start is called before the first frame update
     void Start() {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,14 @@ public class BreakoutPaddle : MonoBehaviour {
             if (xPos < rightWall) {
                 xPos += paddleSpeed * Time.deltaTime;
             }
+        }
+
+        if(Input.GetKeyDown(jumpUpKey)) {
+            rb.AddForce(transform.up * jumpHeight);
+        }
+
+        if (Input.GetKeyDown(jumpDownKey)) {
+            rb.AddForce(-transform.up * jumpHeight);
         }
 
         transform.localPosition = new Vector3(xPos, transform.position.y, 0);

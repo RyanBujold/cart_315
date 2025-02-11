@@ -38,3 +38,9 @@
 - After all the math, I got something that worked somewhat. I thinks it didn't exacly turn out how I thought it would. But it still works nicely to control the ball's angle. Which was the end goal. So at this point I'm satisfied with the result.
 - I wanted to add text displaying the score as the finishing touch but I think that would a bit much here.
 - I'm not sure what else I would want to add except maybe more levels with different wall variations? The wall movement is definitely flexible enough for something like that.
+
+## Exploration Prototype 3
+- I had this idea to take the breakout blocks and make them fall and stack when hit
+- My next thought would be how would the ball fall out of bounds if the fallen bricks stopped them? So I decided there should be another fail condition like a time limit to hit all the other blocks. 
+- I then imagined that you would be able to platform on top of the falling blocks. So I created paddle guy.
+- I gave him unique collision and gave him a jump. The physics were strange and would knock himself over. But instead of locking the rotation, I imagine that it would be more interesting to have a backwards jump to reposition yourself instead.
