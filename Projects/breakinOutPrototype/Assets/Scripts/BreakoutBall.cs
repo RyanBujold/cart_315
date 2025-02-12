@@ -56,8 +56,6 @@ public class BreakoutBall : MonoBehaviour
     // if the ball goes out of bounds
     private void OnCollisionEnter2D(Collision2D other)
     {
-        
-        
         // did we hit a wall?
         if (other.gameObject.tag == "Wall")
         {
@@ -75,22 +73,7 @@ public class BreakoutBall : MonoBehaviour
             blip.Play();
             SpeedCheck();
         }
-        
-        // did we hit the Bottom
-        if (other.gameObject.tag == "Reset")
-        {
-            //GameManager.S.lives -= 1;
-            GameManager.S.LoseLife();
-            Reset();
-        }
-        
-        // did we hit a Brick
-        if (other.gameObject.tag == "Brick") {
-            int r = Random.Range(10, 20);
-            //GameManager.S.lives -= 1;
-            GameManager.S.AddPoint(r);
-            Destroy(other.gameObject);
-        }
+       
     }
 
     private void SpeedCheck() {
@@ -101,13 +84,13 @@ public class BreakoutBall : MonoBehaviour
 
         if (Mathf.Abs(rb.linearVelocity.x) < minSpeed)
         {
-            Debug.Log("too slow?");
+            //Debug.Log("too slow?");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x * 1.1f, rb.linearVelocity.y);
         }
 
         if (Mathf.Abs(rb.linearVelocity.y) < minSpeed)
         {
-            Debug.Log("too slow?");
+            //Debug.Log("too slow?");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 1.1f);
         }
 
@@ -123,7 +106,7 @@ public class BreakoutBall : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, (rb.linearVelocity.y < 0) ? -minSpeed : minSpeed);
         }
         
-        Debug.Log(rb.linearVelocity);
+        //Debug.Log(rb.linearVelocity);
 
     }
 

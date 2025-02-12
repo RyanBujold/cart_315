@@ -44,3 +44,6 @@
 - My next thought would be how would the ball fall out of bounds if the fallen bricks stopped them? So I decided there should be another fail condition like a time limit to hit all the other blocks. 
 - I then imagined that you would be able to platform on top of the falling blocks. So I created paddle guy.
 - I gave him unique collision and gave him a jump. The physics were strange and would knock himself over. But instead of locking the rotation, I imagine that it would be more interesting to have a backwards jump to reposition yourself instead.
+- The bricks have been modified into "fall bricks". When the ball hits them, their physics activate, they fall to the ground and change color.
+- I used the game manager to track how many bricks we need to hit to win the game and how many bricks have been hit to create a win condidion.
+- Once you win, you get the total time in seconds passed as your high score. Now the game is a time trial to compete against other's high scores.
