@@ -76,6 +76,13 @@ public class BreakoutBall : MonoBehaviour
        
     }
 
+    private void OutOfBoundCheck() {
+        // A simple out of bounds checker
+        if(transform.position.x > 100 || transform.position.x < -100 || transform.position.y > 100 || transform.position.y < -100) {
+            Reset();
+        }
+    }
+
     private void SpeedCheck() {
         
         // Prevent ball from going too fast

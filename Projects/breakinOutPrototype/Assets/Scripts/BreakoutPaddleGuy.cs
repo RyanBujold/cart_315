@@ -6,15 +6,20 @@ public class BreakoutPaddleGuy : MonoBehaviour {
     private float     xPos;
     private float     yPos;
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
     public float      paddleSpeed = 10f;
-    private float jumpHeight = 5f;
+    private float jumpHeight = 3f;
     public float      leftWall, rightWall, bottomWall;
+    private const float JUMP_COOLDOWN_TIME = 1f;
+    private float jumpCooldownCounter = 0f;
+    private bool isJumpOnCooldown = false;
 
     public KeyCode leftKey, rightKey, jumpUpKey, jumpDownKey;
 
     // Start is called before the first frame update
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -31,13 +36,27 @@ public class BreakoutPaddleGuy : MonoBehaviour {
             }
         }
 
-        if(Input.GetKeyDown(jumpUpKey)) {
+        if(Input.GetKeyDown(jumpUpKey) && !isJumpOnCooldown) {
             rb.AddForce(transform.up * jumpHeight);
+            isJumpOnCooldown = true;
         }
 
-        if (Input.GetKeyDown(jumpDownKey)) {
-            rb.AddForce(-transform.up * jumpHeight);
+        if (isJumpOnCooldown) {
+            jumpCooldownCounter += Time.deltaTime;
+            if (jumpCooldownCounter > JUMP_COOLDOWN_TIME) {
+                isJumpOnCooldown = false;
+                jumpCooldownCounter = 0f;
+            }
+            sr.color = Color.gray;
         }
+        else {
+            sr.color = Color.white;
+        }
+
+
+        /*if (Input.GetKeyDown(jumpDownKey)) {
+            rb.AddForce(-transform.up * jumpHeight);
+        }*/
 
         transform.localPosition = new Vector3(xPos, transform.position.y, 0);
     }

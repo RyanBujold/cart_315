@@ -40,6 +40,7 @@
 - I'm not sure what else I would want to add except maybe more levels with different wall variations? The wall movement is definitely flexible enough for something like that.
 
 ## Exploration Prototype 3
+![breakout game screenshot](./Media/breakout_screenshot.png)
 - I had this idea to take the breakout blocks and make them fall and stack when hit
 - My next thought would be how would the ball fall out of bounds if the fallen bricks stopped them? So I decided there should be another fail condition like a time limit to hit all the other blocks. 
 - I then imagined that you would be able to platform on top of the falling blocks. So I created paddle guy.
@@ -47,3 +48,13 @@
 - The bricks have been modified into "fall bricks". When the ball hits them, their physics activate, they fall to the ground and change color.
 - I used the game manager to track how many bricks we need to hit to win the game and how many bricks have been hit to create a win condidion.
 - Once you win, you get the total time in seconds passed as your high score. Now the game is a time trial to compete against other's high scores.
+
+## Exploration Prototype 3 - Continued
+- If the question behind the first part of this prototype was "how can I make breakout with falling blocks?", my next question is "How can I make the mechanics more interesting".
+- Once the blocks fall, they act as platforms. However, the player can basically fly and blow right through them. 
+- I modified the bricks so that they have more mass and move around less when pushed by the player. I also got rid of the paddle guy's backwards jump because it was not only un-intuitive, without it the player has to work to flip the paddle right side up in order to use their jump ability again, adding depth.
+- I gave the paddle guy's jump a cooldown so that you can no longer fly around. The paddle guy's color darkens to show when the jump is on cooldown.
+- I added some simple ui to show the timer that tracks how long it took to beat the level. I also put a goal time. This would keep the high score mechanic while also creating an initial challenge to beat.
+- Also added a simple out of bounds checker for the ball. If its traveling somewhere too far out of the game, it will reset.
+
+## Extra Credit Game Analysis
