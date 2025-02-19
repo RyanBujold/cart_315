@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time: '
+  m_text: Press 'Space' to start - ('q' & 'e' to rotate)('w' to jump)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1342,19 +1342,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 886500895486209731, guid: 07c6d521bc330454ba72f87715bcb807, type: 3}
       propertyPath: m_Size.x
-      value: 1.000359
+      value: 0.716359
       objectReference: {fileID: 0}
     - target: {fileID: 886500895486209731, guid: 07c6d521bc330454ba72f87715bcb807, type: 3}
       propertyPath: m_Size.y
-      value: 0.7580782
+      value: 0.5226908
       objectReference: {fileID: 0}
     - target: {fileID: 886500895486209731, guid: 07c6d521bc330454ba72f87715bcb807, type: 3}
       propertyPath: m_Offset.x
-      value: 0.002633512
+      value: 0.011588454
       objectReference: {fileID: 0}
     - target: {fileID: 886500895486209731, guid: 07c6d521bc330454ba72f87715bcb807, type: 3}
       propertyPath: m_Offset.y
-      value: -0.0058047175
+      value: -0.12349844
       objectReference: {fileID: 0}
     - target: {fileID: 886500895486209731, guid: 07c6d521bc330454ba72f87715bcb807, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -1474,6 +1474,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5901019169944371743, guid: 07c6d521bc330454ba72f87715bcb807, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1644625122}
+    - targetCorrespondingSourceObject: {fileID: 5901019169944371743, guid: 07c6d521bc330454ba72f87715bcb807, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1644625117}
   m_SourcePrefab: {fileID: 100100000, guid: 07c6d521bc330454ba72f87715bcb807, type: 3}
@@ -1498,10 +1501,59 @@ MonoBehaviour:
   leftWall: -7.75
   rightWall: 7.75
   bottomWall: -5.5
+  rotationSpeed: 1
   leftKey: 97
   rightKey: 100
   jumpUpKey: 119
   jumpDownKey: 115
+  rotateRightKey: 101
+  rotateLeftKey: 113
+--- !u!61 &1644625122
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644625109}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.2494595}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.75}
+    newSize: {x: 0.25, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 0.251081}
+  m_EdgeRadius: 0
 --- !u!1 &1745856470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,6 +1687,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 0
+  goalTime: 60
+  gameStarted: 0
   heartImage: {fileID: 1394559352}
   textMesh: {fileID: 1578566450}
 --- !u!224 &1975164285

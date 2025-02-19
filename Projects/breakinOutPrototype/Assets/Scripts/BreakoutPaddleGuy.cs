@@ -5,6 +5,7 @@ using UnityEngine;
 public class BreakoutPaddleGuy : MonoBehaviour {
     private float     xPos;
     private float     yPos;
+    private float zRot;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     public float      paddleSpeed = 10f;
@@ -13,8 +14,9 @@ public class BreakoutPaddleGuy : MonoBehaviour {
     private const float JUMP_COOLDOWN_TIME = 1f;
     private float jumpCooldownCounter = 0f;
     private bool isJumpOnCooldown = false;
+    public float rotationSpeed = 1f;
 
-    public KeyCode leftKey, rightKey, jumpUpKey, jumpDownKey;
+    public KeyCode leftKey, rightKey, jumpUpKey, jumpDownKey, rotateRightKey, rotateLeftKey;
 
     // Start is called before the first frame update
     void Start() {
@@ -36,7 +38,17 @@ public class BreakoutPaddleGuy : MonoBehaviour {
             }
         }
 
-        if(Input.GetKeyDown(jumpUpKey) && !isJumpOnCooldown) {
+        zRot = 0f;
+        if (Input.GetKey(rotateRightKey)) {
+            zRot -= rotationSpeed;
+        }
+
+        if(Input.GetKey(rotateLeftKey)) {
+            zRot += rotationSpeed;
+        }
+
+
+        if (Input.GetKeyDown(jumpUpKey) && !isJumpOnCooldown && GameManager.S.gameStarted) {
             rb.AddForce(transform.up * jumpHeight);
             isJumpOnCooldown = true;
         }
@@ -53,12 +65,8 @@ public class BreakoutPaddleGuy : MonoBehaviour {
             sr.color = Color.white;
         }
 
-
-        /*if (Input.GetKeyDown(jumpDownKey)) {
-            rb.AddForce(-transform.up * jumpHeight);
-        }*/
-
         transform.localPosition = new Vector3(xPos, transform.position.y, 0);
+        transform.Rotate(transform.rotation.x, transform.rotation.y, zRot);
     }
 }
 

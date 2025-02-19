@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour {
     private int numBricksHit = 0;
     private float timePassed;
     private bool didWin = false;
-    private float goalTime = 60f;
+    public float goalTime = 100f;
+    public bool gameStarted = false;
 
     public Image heartImage;
     public TextMeshProUGUI textMesh;
@@ -32,21 +33,27 @@ public class GameManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if(numBricksToHit == numBricksHit && !didWin) {
+        if(!gameStarted) {
+            if(Input.GetKeyDown(KeyCode.Space)) {
+                gameStarted = true;
+            }
+        }
+        
+        if (numBricksToHit == numBricksHit && !didWin) {
             didWin = true;
             if (timePassed < goalTime) {
-                textMesh.text = "Time: " + (Mathf.Round(timePassed * 100.0f) * 0.01f) + "Victory! Here is your final time!";
+                textMesh.text = "Victory! Here is your final time: " + (Mathf.Round(timePassed * 100.0f) * 0.01f) + "s";
             }
             else {
-                textMesh.text = "Time: " + (Mathf.Round(timePassed * 100.0f) * 0.01f) + "Better Luck Next Time! Here is your final time!";
+                textMesh.text = "Better Luck Next Time! Here is your final time: " + (Mathf.Round(timePassed * 100.0f) * 0.01f) + "s";
             }
         }
 
-        if (!didWin) {
+        if (!didWin && gameStarted) {
             timePassed += Time.deltaTime;
+            textMesh.text = "Goal Time: " + goalTime + "s | Time: " + (Mathf.Round(timePassed * 100.0f) * 0.01f) + "s";
         }
-
-        textMesh.text = "Time: " + (Mathf.Round(timePassed * 100.0f) * 0.01f) + "s | Goal Time: 60s";
+        
     }
     
     public void AddPoint(int numPoints) {
