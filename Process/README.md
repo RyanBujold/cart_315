@@ -58,3 +58,23 @@
 - Also added a simple out of bounds checker for the ball. If its traveling somewhere too far out of the game, it will reset.
 - I found that it was too easy to fall over and too difficult to put yourself upright. So I added buttons that can rotate the paddle guy left and right. The paddle guy also now has more detailed collision, making him a bit harder to keep upright.
 - When the game starts, you can jump into the ball and mess up everything before pressing space to launch it. So I made it that the paddle guy can't jump before space is pressed. The timer also doesn't start until the ball launches.
+
+## Iterative Prototype 1
+- I think the design values of my game will mainly be surrounding decision making, theme and challenge. I want to make a game that encourages the player that encourages interesting decision making. The right option shouldn't obvious and there should be nuance to choices made. I think themes can help tie together the feel of a game so I would like a strong visual theme. Challenge I believe makes the experience more engaging for players. So I will make sure to find the balance that suits the game the most.
+- As for my 3 favorite ideas that came about from the ideation, they are:
+1. Racing Rats: A game where you race as rats climbing through the walls and furniture of a house.
+2. Near Infinite Guard Rails: Guiding a racer with bouncing rails or simply a guiding path that the player creates.
+3. Crawl Stamina: A stamina managing game where you have to crawl around.
+
+### Testing An Idea - Physical Prototype
+- To make a prototype, I decided to test out the idea for near infinite guard rails.
+- The game is to use guard rails to guide a marble from the top of the board to the bottom while avoiding the pitfalls and landing inside the marked hole at the bottom.
+- The user would drop the marble at the gap from the top and it would roll down due to gravity and the angle of the board.
+- The challenge here is to guide the marble safely to its goal while making sure it falls into the correct hole.
+
+<img src="./Media/prototype_rails_1.jpg " width="500">
+<img src="./Media/prototype_rails_2.jpg " width="500">
+
+- The holes allow the ball to drop into the inside of the box where it can be retrived easily.
+
+<img src="./Media/prototype_rails_3.jpg " width="500">
