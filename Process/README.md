@@ -105,3 +105,10 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 - The holes allow the ball to drop into the inside of the box where it can be retrived easily.
 
 <img src="./Media/prototype_rails_3.jpg " width="500">
+
+## Iterative Prototype 2
+**Question:**
+- How can I turn my physical prototype into a racing game?
+**Creation:**
+- I started by using unity's physics to guide a ball along rails.
+**Reflection:**
