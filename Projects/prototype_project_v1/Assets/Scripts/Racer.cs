@@ -20,7 +20,7 @@ public class Racer : MonoBehaviour
     {
         // When drive key pressed, move the racer forward
         if(Input.GetKey(driveKey)){
-            rb.velocity += new Vector3(0,0,driveSpeed);
+            rb.velocity += transform.forward * driveSpeed;
         }
 
     }

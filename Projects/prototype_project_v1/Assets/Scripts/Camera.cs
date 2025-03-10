@@ -16,6 +16,7 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Racer.transform.position + new Vector3(0,2,-5);
+        //transform.position = Racer.transform.position + new Vector3(0,2,-5);
+        //transform.rotation = Quaternion.Slerp(0,Racer.transform.rotation.y,0);
     }
 }
