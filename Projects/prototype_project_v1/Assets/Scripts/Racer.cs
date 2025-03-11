@@ -19,8 +19,9 @@ public class Racer : MonoBehaviour
     void Update()
     {
         // When drive key pressed, move the racer forward
-        if(Input.GetKey(driveKey)){
+        if(Input.GetKeyDown(driveKey)){
             rb.velocity += transform.forward * driveSpeed;
+            Debug.Log("Pressed");
         }
 
     }

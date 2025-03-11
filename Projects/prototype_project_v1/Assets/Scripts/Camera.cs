@@ -4,19 +4,35 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    public GameObject Racer;
+    public Transform Racer;
 
+    private float maxCameraDistance;
+    private Vector3 cameraOffset;
+    private Transform initialCamera;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        cameraOffset = transform.position - Racer.position;
+        maxCameraDistance = Vector3.Distance(transform.position, Racer.transform.position);
+        initialCamera = transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //transform.position = Racer.transform.position + new Vector3(0,2,-5);
-        //transform.rotation = Quaternion.Slerp(0,Racer.transform.rotation.y,0);
+        if(Vector3.Distance(transform.position, Racer.transform.position) >= maxCameraDistance) {
+
+            Vector3 targetPosition = Racer.position + cameraOffset;
+
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, 0.5f);
+        }
+        transform.LookAt(new Vector3(Racer.position.x, transform.position.y, Racer.position.z));
+        transform.Rotate(8.45f, 0f, 0f, Space.Self);
+        //transform.rotation = Quaternion.Euler(initialCamera.rotation.x, transform.rotation.y, initialCamera.rotation.z);
+
+        transform.position = new Vector3(transform.position.x,initialCamera.position.y,transform.position.z);
+
     }
+
 }
