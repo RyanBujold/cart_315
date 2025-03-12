@@ -1,7 +1,7 @@
 # Process Journal
 
 ## Tiny Game | 23/01/2025
-![game screenshot](./Media/unlok_screenshot.png)
+<img src="./Media/unlok_screenshot.png" width="800">
 
 [Game Link](../Projects/UnLok.html)
 
@@ -19,6 +19,8 @@
 - So I used this as the gimmick for the final level
 - The later levels with the mole onwards are buggy and not well balanced
 
+<img src="./Media/unlok_vid1.gif" width="800">
+
 ### Playtest notes: 
 - everyone liked the game and found it very challenging
 - Someone who likes puzzle games specifically really enjoyed it
@@ -27,6 +29,9 @@
 - I forgot to work on this. I think that my goals going forward will be to not forget again and mess around to find something interesting to turn the prototype into. 
 
 ## Exploration Prototype 2
+
+<img src="./Media/pong_vid1.gif" width="800">
+
 - Starting with the pong template
 - Modified the paddle's movement to scale to time passed (delta time)
 - Thinking about the game "Cube Slam" and how it made pong fun and interesting. Might steal some ideas from it
@@ -40,7 +45,8 @@
 - I'm not sure what else I would want to add except maybe more levels with different wall variations? The wall movement is definitely flexible enough for something like that.
 
 ## Exploration Prototype 3
-![breakout game screenshot](./Media/breakout_screenshot.png)
+<img src="./Media/breakout_screenshot.png" width="800">
+
 - I had this idea to take the breakout blocks and make them fall and stack when hit
 - My next thought would be how would the ball fall out of bounds if the fallen bricks stopped them? So I decided there should be another fail condition like a time limit to hit all the other blocks. 
 - I then imagined that you would be able to platform on top of the falling blocks. So I created paddle guy.
@@ -50,6 +56,8 @@
 - Once you win, you get the total time in seconds passed as your high score. Now the game is a time trial to compete against other's high scores.
 
 ## Exploration Prototype 3 - Continued
+<img src="./Media/breakout_vid1.gif" width="800">
+
 - If the question behind the first part of this prototype was "how can I make breakout with falling blocks?", my next question is "How can I make the mechanics more interesting".
 - Once the blocks fall, they act as platforms. However, the player can basically fly and blow right through them. 
 - I modified the bricks so that they have more mass and move around less when pushed by the player. I also got rid of the paddle guy's backwards jump because it was not only un-intuitive, without it the player has to work to flip the paddle right side up in order to use their jump ability again, adding depth.
@@ -60,6 +68,8 @@
 - When the game starts, you can jump into the ball and mess up everything before pressing space to launch it. So I made it that the paddle guy can't jump before space is pressed. The timer also doesn't start until the ball launches.
 
 ## Iterative Prototype 1
+<img src="./Media/prototype_rails_1.jpg " width="500">
+
 - I think the design values of my game will mainly be surrounding decision making, theme and challenge. I want to make a game that encourages the player that encourages interesting decision making. The right option shouldn't obvious and there should be nuance to choices made. I think themes can help tie together the feel of a game so I would like a strong visual theme. Challenge I believe makes the experience more engaging for players. So I will make sure to find the balance that suits the game the most.
 - As for my 3 favorite ideas that came about from the ideation, they are:
 1. Racing Rats: A game where you race as rats climbing through the walls and furniture of a house.
@@ -72,7 +82,6 @@
 - The user would drop the marble at the gap from the top and it would roll down due to gravity and the angle of the board.
 - The challenge here is to guide the marble safely to its goal while making sure it falls into the correct hole.
 
-<img src="./Media/prototype_rails_1.jpg " width="500">
 <img src="./Media/prototype_rails_2.jpg " width="500">
 
 - The holes allow the ball to drop into the inside of the box where it can be retrived easily.
@@ -80,7 +89,7 @@
 <img src="./Media/prototype_rails_3.jpg " width="500">
 
 ## Iterative Prototype 2
-<img src="./Media/iteration2_vid1.gif" width="700">
+<img src="./Media/iteration2_vid1.gif" width="800">
 
 ### Question
 - Is controlling a racer with guard rails feasible for the player?
@@ -96,7 +105,7 @@
 ### Reflection
 - It was much more difficult to manage the camera than I had imagined
 
-<img src="./Media/iteration2_vid2.gif" width="700">
+<img src="./Media/iteration2_vid2.gif" width="800">
 
 - I suppose what I was looking for was maybe too specific even though there were many instances where I got close
 - Suprisingly, even with the stiff camera, the game is pretty easy to handle
