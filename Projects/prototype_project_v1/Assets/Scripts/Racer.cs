@@ -21,8 +21,11 @@ public class Racer : MonoBehaviour
         // When drive key pressed, move the racer forward
         if(Input.GetKeyDown(driveKey)){
             rb.velocity += transform.forward * driveSpeed;
-            Debug.Log("Pressed");
         }
+
+        //var targetRotation = Quaternion.LookRotation(transform.position + rb.velocity.normalized);
+        //transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 50f * Time.deltaTime);
+        transform.LookAt(transform.position + rb.velocity);
 
     }
 

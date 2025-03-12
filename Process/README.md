@@ -78,3 +78,28 @@
 - The holes allow the ball to drop into the inside of the box where it can be retrived easily.
 
 <img src="./Media/prototype_rails_3.jpg " width="500">
+
+## Iterative Prototype 2
+<img src="./Media/iteration2_vid1.gif" width="700">
+
+### Question
+- Is controlling a racer with guard rails feasible for the player?
+### Implementation
+- After seing that controlling a marble through guard rails could be fun, I decided to apply it to my racing game concept
+- I made a unity 3d project where you control a marble like racer that can only move forwards
+- I worked on a camera that could follow it smoothly even if it changed direction
+- This ended up taking a lot of time to figure something out that was functional and looked fluid
+- I wanted the camera to smoothly trail behind the racer as it turns and changes direction
+- I couldn't figure out a solution so the best I could get was simply snaping the camera to the direction the racer was heading towards
+- Then after testing with static walls to bounce the racer, I made a wall placer
+- The player's cursor can place walls to bounce the racer around
+### Reflection
+- It was much more difficult to manage the camera than I had imagined
+
+<img src="./Media/iteration2_vid2.gif" width="700">
+
+- I suppose what I was looking for was maybe too specific even though there were many instances where I got close
+- Suprisingly, even with the stiff camera, the game is pretty easy to handle
+- I do think that a smoother camera would be better for a more robust iteration
+- I also didn't spend much time looking at what happens when velocity is added while the racer is moving and could be fixed in a later iteration
+- Overall I think that this idea has way more potential than I initially imagined
