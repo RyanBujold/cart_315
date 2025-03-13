@@ -70,6 +70,34 @@
 ## Iterative Prototype 1
 <img src="./Media/prototype_rails_1.jpg " width="500">
 
+=======
+### Brain Dump
+"I want to make a racing game"
+cars, f-1, time trials, race tracks, maps, environments, racers, custimization, engines, speed, crashing, items, stats, velocity, steering, karts, destruction, multiplayer, guard rails, control, drift, boost, nitro, stamina, characters, trails, shortcuts, environments, fast-paced decisions, realism, difficulty, obstacles, speed boosts, mud pits, trees, metal, steel, tires, plains, traversal, competition, grandprix, placement, finish line, start line, prizes, standings, rankings, directions, comeback mechanics, collision, aesthetic, personalization
+### Hybrids
+*Note: I wrote down ideas based on combinations of words but didn't write the combos. For the 3 I chose, I happen to remember what combinations created those ideas.
+- Racing with trails that otheres race on
+- Traversing forests/offroading
+- Fully customizable racing machines you build as you race
+- Drifting focused on highscores
+- Race track that encourages decision making with split paths
+### Speed Dating
+- Nitro that destroys cars
+- Cathedral themed racing game
+- Low ranking racers get a chance at redemption
+- Racing rats inside walls of house
+- Racing rhythm game
+- Race where you crawl with stamina system
+- Flying in free-fall with boosts
+- Guiding car with bouncy guard rails
+- Rabbit hole shortcuts
+- Diving into subjects through racing
+- Racing across the sun
+- Robot on moon racing
+- Goth kart
+- Hell highway (very fast, racing through layers of hell)
+
+### Refining ideas
 - I think the design values of my game will mainly be surrounding decision making, theme and challenge. I want to make a game that encourages the player that encourages interesting decision making. The right option shouldn't obvious and there should be nuance to choices made. I think themes can help tie together the feel of a game so I would like a strong visual theme. Challenge I believe makes the experience more engaging for players. So I will make sure to find the balance that suits the game the most.
 - As for my 3 favorite ideas that came about from the ideation, they are:
 1. Racing Rats: A game where you race as rats climbing through the walls and furniture of a house.
@@ -112,3 +140,9 @@
 - I do think that a smoother camera would be better for a more robust iteration
 - I also didn't spend much time looking at what happens when velocity is added while the racer is moving and could be fixed in a later iteration
 - Overall I think that this idea has way more potential than I initially imagined
+=======
+**Question:**
+- How can I turn my physical prototype into a racing game?
+**Creation:**
+- I started by using unity's physics to guide a ball along rails.
+**Reflection:**
