@@ -8,7 +8,7 @@ public class BouncerPlacer : MonoBehaviour
     public GameObject BouncerToSpawn;
     public KeyCode rotateRightKey, rotateLeftKey;
 
-    private const float distanceFromCamera = 20f;
+    private const float distanceFromCamera = 30f;
 
     private bool mouseCliked = false;
 

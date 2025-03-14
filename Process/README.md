@@ -70,7 +70,6 @@
 ## Iterative Prototype 1
 <img src="./Media/prototype_rails_1.jpg " width="500">
 
-=======
 ### Brain Dump
 "I want to make a racing game"
 cars, f-1, time trials, race tracks, maps, environments, racers, custimization, engines, speed, crashing, items, stats, velocity, steering, karts, destruction, multiplayer, guard rails, control, drift, boost, nitro, stamina, characters, trails, shortcuts, environments, fast-paced decisions, realism, difficulty, obstacles, speed boosts, mud pits, trees, metal, steel, tires, plains, traversal, competition, grandprix, placement, finish line, start line, prizes, standings, rankings, directions, comeback mechanics, collision, aesthetic, personalization
@@ -140,9 +139,15 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 - I do think that a smoother camera would be better for a more robust iteration
 - I also didn't spend much time looking at what happens when velocity is added while the racer is moving and could be fixed in a later iteration
 - Overall I think that this idea has way more potential than I initially imagined
-=======
-**Question:**
-- How can I turn my physical prototype into a racing game?
-**Creation:**
-- I started by using unity's physics to guide a ball along rails.
-**Reflection:**
+
+## Iterative Prototype 3
+### Question
+- How can I make a playable racing game from my previous tests?
+
+### Implementation
+- I started by making a race track
+- To fix the camera, by the advice of a fellow classmate, I decided to check out cinemachine
+- It ended up working and making an nice camera
+
+### Reflection
+- ...
