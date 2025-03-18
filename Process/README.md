@@ -147,7 +147,12 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 ### Implementation
 - I started by making a race track
 - To fix the camera, by the advice of a fellow classmate, I decided to check out cinemachine
-- It ended up working and making an nice camera
+- It ended up working and making a nice camera
+- I then decided to add obstacles to the race track to make it more dangerous to complete
+    - I put walls to stop the player from escaping
+    - A kill floor for if the player falls out of bounds
+    - Pillars that are on track obstacles
+
 
 ### Reflection
 - ...
