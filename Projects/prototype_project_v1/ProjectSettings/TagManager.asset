@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bouncer
   - Obstacle
+  - WindBox
+  - Racer
   layers:
   - Default
   - TransparentFX

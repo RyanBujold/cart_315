@@ -36,6 +36,10 @@ public class Racer : MonoBehaviour
 
     }
 
+    public void AddVelocity(Vector3 vector) {
+        rb.velocity += vector;
+    }
+
     private void OnCollisionEnter(Collision other) {
         // did we hit an obstacle
         if (other.gameObject.tag == "Obstacle") {

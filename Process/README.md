@@ -141,18 +141,58 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 - Overall I think that this idea has way more potential than I initially imagined
 
 ## Iterative Prototype 3
+
+<img src="./Media/iteration3_img1.png" width="800">
+
 ### Question
 - How can I make a playable racing game from my previous tests?
 
 ### Implementation
 - I started by making a race track
 - To fix the camera, by the advice of a fellow classmate, I decided to check out cinemachine
-- It ended up working and making a nice camera
 - I then decided to add obstacles to the race track to make it more dangerous to complete
     - I put walls to stop the player from escaping
     - A kill floor for if the player falls out of bounds
     - Pillars that are on track obstacles
+    - Wind that moves the racer around
 
+<img src="./Media/iteration3_img2.png" width="800">
+
+*The windbox on the race track*
 
 ### Reflection
-- ...
+- Design Principles 
+    - When it comes to my design principles, I do think that while there is challenge, it is not neccessarily there yet 
+    - Perhaps more obstacles closer together could accomplish this?
+- Bugs
+    - The camera is still causing problems despite the new cinemachine camera being a definite upgrade
+    - I did have to do some strange code in order to make sure that the ball doesn't bounce too much 
+    ```
+        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * 0.95f, rb.velocity.z);
+    ```
+    - I'm hoping this code doesn't cause too much trouble if I ever decide to add trickier terrain
+- Overall
+    - Things are really starting to get fleshed out 
+    - The idea of a racing game seems more and more possible
+
+<img src="./Media/iteration3_vid1.gif" width="800">
+
+*Camera jitters and wind effect*
+
+### Ideas for next iteration
+- Visuals
+    - I think I could possible prototype some visuals for the game
+    - Adding a completely new and more complex race track
+    - Changing the racer's model
+    - UI elements
+- Balance
+    - Some balance adjustments to the difficulty
+    - New types of obstacles for the track
+- Features
+    - Making a working lap counter
+    - Adding a win and lose condition
+   
+
+
+
+

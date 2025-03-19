@@ -9,7 +9,7 @@ public class BouncerPlacer : MonoBehaviour
     public KeyCode rotateRightKey, rotateLeftKey;
 
     private const float distanceFromCamera = 30f;
-    private const float rotationAmount = 25f;
+    private const float rotationAmount = 0.5f;
 
     private bool mouseCliked = false;
 
@@ -32,11 +32,11 @@ public class BouncerPlacer : MonoBehaviour
             mouseCliked = false;
         }
 
-        if(Input.GetKeyDown(rotateLeftKey)) {
+        if(Input.GetKey(rotateLeftKey)) {
             transform.Rotate(0, rotationAmount, 0, Space.Self);
         }
 
-        if (Input.GetKeyDown(rotateRightKey)) {
+        if (Input.GetKey(rotateRightKey)) {
             transform.Rotate(0, -rotationAmount, 0, Space.Self);
         }
 
