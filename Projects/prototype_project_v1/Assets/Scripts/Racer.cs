@@ -36,6 +36,10 @@ public class Racer : MonoBehaviour
 
     }
 
+    public float GetCurrentVelocity(){
+        return rb.velocity.magnitude;
+    }
+
     public void AddVelocity(Vector3 vector) {
         rb.velocity += vector;
     }

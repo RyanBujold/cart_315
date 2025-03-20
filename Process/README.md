@@ -192,7 +192,36 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
     - Making a working lap counter
     - Adding a win and lose condition
    
+### Feedback
+- Players thoughts
+  - The camera was a not ideal and shoudle be positioned higher
+  - They like the unique movement but felt like instead of just completing a race they should have the ability to explore an environment of some kind
+  - Another idea was creating something as you travel. Something building in your trail that you can maybe look back upon and enjoy
+- My thoughts on the feedback
+  - I also wanted the camera to be fixed that way but I thought that the way I implemented it before was causing extra jitters. After some research, I realise that its actually the movement of the racer that is jittery and not the camera. So finally adding this feature properly is indeed a good idea.
+  - In terms of making the game more exploration oriented rather than challenge oriented, I think this is too far from the design goals for my game. This idea kind of reminds me of the game exo one. I do think I will take a bit from this idea by potentially adding a more open racetrack with more options of traversal. Maybe even a free play option to drive around without the threat of a game over.  If this was a full game, I would make the hub world for levels open like this. (think diddy kong racing) 
+  
+<img src="./Media/exo_one_vid.gif" width="400">
+<img src="./Media/dkr_hub_world_img.webp" width="400">
+
+*Exo One Video Game & Diddy Kong Racing Hub World*
 
 
 
+## Iterativ Prototype 4
 
+### Question
+- How can I create interesting challenge for my game?
+- Goals
+  - [x] Fix camera
+  - [ ] Making a lap counter
+  - [ ] Making a win condition
+  - [ ] Making a lose condition
+  - [ ] New type of obstacle
+  - [ ] Rework the race track layout
+  - [ ] UI elements
+  - [ ] Draft of possible visuals
+
+### Implementation
+
+### Reflection 
