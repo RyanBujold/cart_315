@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void RaceWon() {
+        Debug.Log("FINISH!!!");
+    }
+
     public void TestLogs() {
         Debug.Log("Testing the debug logs");
     }
