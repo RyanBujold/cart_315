@@ -214,17 +214,27 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 - How can I create interesting challenge for my game?
 - Goals
   - [x] Fix camera
-  - [ ] Making a time trial
+  - [x] Making a time trial
   - [ ] Making a lose condition
   - [ ] New type of obstacle
   - [x] Rework the race track layout
   - [x] UI elements
   - [ ] Draft of possible visuals
+  - [ ] Collectible items
+  - [x] Update collision
 
 ### Implementation
 - I fixed the camera angle to be offset and not have any damping when following the racer
+    - *This is to make sure that the racer never moves further ahead than where you can place bumpers to guide it*
+    - *It also give the player a good view of the track and racer at all times*
 - The whole racetrack was turned from a loop to a straight track with a definite start and end
+    - *This is to emphasize the time trial aspect of the game design by having a clear start and end point*
 - There is now a speedometer that tracks the player's speed
+    - *It helps the user keep track of how fast they are going now that the damping camera effect has been removed*
+- A countdown timer starts off the time trial for the player
+    - *This is to prepare the user for a race*
+- I modified the collision material from the racer to the bouncer
+    - *Before, extra code was needed to make gravity work but that has now bit fixed*
 
 *Note to self: You've written 'what', make sure to include 'so what'*
 

@@ -23,16 +23,13 @@ public class Racer : MonoBehaviour
     void Update()
     {
         // When drive key pressed, move the racer forward
-        if(Input.GetKey(driveKey)){
+        if(Input.GetKey(driveKey) && GameManager.S.IsRaceActive){
             rb.velocity += ((transform.forward * driveSpeed) * Time.deltaTime);
         }
 
         // Always make the ball face the direction of its velocity
         Vector3 velocityToLookAt = transform.position + new Vector3(rb.velocity.x, 0, rb.velocity.z);
         transform.LookAt(velocityToLookAt);
-
-        // Make sure the ball doesn't bounce so much
-        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * 0.95f, rb.velocity.z);
 
     }
 
