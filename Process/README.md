@@ -215,11 +215,11 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 - Goals
   - [x] Fix camera
   - [x] Making a time trial
-  - [ ] Making a lose condition
+  - [x] Making a lose condition
   - [ ] New type of obstacle
   - [x] Rework the race track layout
   - [x] UI elements
-  - [ ] Draft of possible visuals
+  - [x] Draft of possible visuals
   - [ ] Collectible items
   - [x] Update collision
 
@@ -235,6 +235,11 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
     - *This is to prepare the user for a race*
 - I modified the collision material from the racer to the bouncer
     - *Before, extra code was needed to make gravity work but that has now bit fixed*
+
+<img src="./Media/iteration4_img1.png" width="800">
+
+- I made a draft of what a final game might look like
+    - *This is to guide the racetrack design a bit more as well as brainstorming a visual theme*
 
 *Note to self: You've written 'what', make sure to include 'so what'*
 

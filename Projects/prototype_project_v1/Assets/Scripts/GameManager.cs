@@ -19,9 +19,8 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
-        Timer = 0;
+        Reset();
         CountdownTimer = STARTING_COUNTDOWN_TIME;
-        IsRaceActive = false;
     }
 
     // Update is called once per frame
@@ -39,15 +38,16 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public void TestLogs() {
-        Debug.Log("Testing the debug logs");
-    }
-
     public void StartRace() {
         IsRaceActive = true;
     }
 
     public void EndRace() {
+        IsRaceActive = false;
+    }
+
+    public void Reset() {
+        Timer = 0;
         IsRaceActive = false;
     }
 
