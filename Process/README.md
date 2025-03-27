@@ -206,7 +206,7 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 
 *Exo One Video Game & Diddy Kong Racing Hub World*
 
-## Iterativ Prototype 4
+## Iterative Prototype 4
 
 <img src="./Media/iteration4_vid1.gif" width="800">
 
