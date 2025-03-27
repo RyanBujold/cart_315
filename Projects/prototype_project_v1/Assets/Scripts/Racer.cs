@@ -37,6 +37,16 @@ public class Racer : MonoBehaviour
         Vector3 velocityToLookAt = transform.position + new Vector3(rb.velocity.x, 0, rb.velocity.z);
         transform.LookAt(velocityToLookAt);
 
+        // Make sure we never have too much y velocity upwards
+        if(rb.velocity.y > 5) {
+            rb.velocity = new Vector3(rb.velocity.x, 5, rb.velocity.z);
+        }
+
+        // If we finish the race, stop the racer
+        if (GameManager.S.IsRaceFinished) {
+            rb.velocity = new Vector3(0, 0, 0);
+        }
+
     }
 
     public float GetCurrentVelocity(){

@@ -17,7 +17,6 @@ public class TimeScirpt : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-
         // Convert the times into a minute, second format
         int goalMin = Mathf.FloorToInt(GameManager.S.GOAL_TIME / 60F);
         int goalSec = Mathf.FloorToInt(GameManager.S.GOAL_TIME - goalMin * 60);
@@ -30,5 +29,17 @@ public class TimeScirpt : MonoBehaviour
 
         // Add the string to our ui text
         timerText.text = timerString;
+
+        if (GameManager.S.IsRaceFinished) {
+            // Check if we won after the race ends
+            if (GameManager.S.Timer > GameManager.S.GOAL_TIME) {
+                timerText.text = timerString + "\nYOU LOST! TOO SLOW!";
+            }
+            else {
+                timerText.text = timerString + "\nYOU WIN! GOOD WORK!";
+            }
+        }
+
+        
     }
 }

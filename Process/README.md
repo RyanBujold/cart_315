@@ -206,9 +206,9 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 
 *Exo One Video Game & Diddy Kong Racing Hub World*
 
-
-
 ## Iterativ Prototype 4
+
+<img src="./Media/iteration4_vid1.gif" width="800">
 
 ### Question
 - How can I create interesting challenge for my game?
@@ -216,7 +216,7 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
   - [x] Fix camera
   - [x] Making a time trial
   - [x] Making a lose condition
-  - [ ] New type of obstacle
+  - [x] New type of obstacle
   - [x] Rework the race track layout
   - [x] UI elements
   - [x] Draft of possible visuals
@@ -227,6 +227,9 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 - I fixed the camera angle to be offset and not have any damping when following the racer
     - *This is to make sure that the racer never moves further ahead than where you can place bumpers to guide it*
     - *It also give the player a good view of the track and racer at all times*
+
+<img src="./Media/iteration4_img3.png" width="800">
+
 - The whole racetrack was turned from a loop to a straight track with a definite start and end
     - *This is to emphasize the time trial aspect of the game design by having a clear start and end point*
 - There is now a speedometer that tracks the player's speed
@@ -235,12 +238,38 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
     - *This is to prepare the user for a race*
 - I modified the collision material from the racer to the bouncer
     - *Before, extra code was needed to make gravity work but that has now bit fixed*
+- The pillar enemies now move around
+    - *This is to increase the challenge of the race to enforce my design goals*
+- I put instructions on the display
+    - *Makes it easier for players to understand how to play without me there to say it*
+- I added a speed cap to the racer's y velocity
+    - *This is to stop the player from flying over the entire track without engaging in the challenge*
+    ```
+        // Make sure we never have too much y velocity upwards
+        if(rb.velocity.y > 5) {
+            rb.velocity = new Vector3(rb.velocity.x, 5, rb.velocity.z);
+        }
+    ```
+<img src="./Media/iteration4_img2.png" width="400">
+
+- The game now has a win screen and win/lose condition for beating the time trial
+    - *The game is now a proper game with a win and lose that falls under the design goals*
 
 <img src="./Media/iteration4_img1.png" width="800">
 
 - I made a draft of what a final game might look like
     - *This is to guide the racetrack design a bit more as well as brainstorming a visual theme*
-
-*Note to self: You've written 'what', make sure to include 'so what'*
+    - *The 'rat racing' theme came from one of the design ideas that came from the [initial brainstorming](#refining-ideas)*
 
 ### Reflection 
+- The game now has an interesting challenge to it
+- Its really starting to shape into a full protype
+
+### Ideas for next iteration
+- Visuals
+    - I could turn my draft of the visuals into the real deal
+- More levels
+    - This is unlikely because of time constraints but more levels would make for a more varied experience
+- Collectibles
+    - I wasn't able to make it this iteration, but having collectibles along the racetrack could be interesting
+    - They could benefit the racer in some way or be required to finish the race

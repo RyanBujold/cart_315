@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PillarScript : MonoBehaviour
 {
-    public Vector3 Position1;
-    public Vector3 Position2;
+    public Transform Position1;
+    public Transform Position2;
     public float PillarSpeed;
 
     private Vector3 chasePosition;
@@ -17,7 +17,7 @@ public class PillarScript : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         //this.transform.position = new Vector3(Position1.x, Position1.y, Position1.z);
-        chasePosition = Position2;
+        chasePosition = Position2.position;
         chasingPos1 = true;
     }
 
@@ -27,11 +27,11 @@ public class PillarScript : MonoBehaviour
         float distance = Vector3.Distance(this.transform.position, chasePosition);
         if (distance < 1f) {
             if (chasingPos1) {
-                chasePosition = Position2;
+                chasePosition = Position2.position;
                 chasingPos1 = false;
             }
             else {
-                chasePosition = Position1;
+                chasePosition = Position1.position;
                 chasingPos1 = true;
             }
         }

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+
+    public KeyCode startRaceKey;
+    
     public static GameManager S;
 
     public readonly float GOAL_TIME = 75;
@@ -10,6 +13,8 @@ public class GameManager : MonoBehaviour {
     public float Timer { get; private set; }
     public float CountdownTimer { get; private set; }
     public bool IsRaceActive { get; private set; }
+    public bool IsGameStarted { get; private set; }
+    public bool IsRaceFinished {  get; private set; }
 
     private const float STARTING_COUNTDOWN_TIME = 3;
 
@@ -25,17 +30,25 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        // Increment the timer while the race is happening
-        if (IsRaceActive) { 
-            Timer += Time.deltaTime;
-        }
-        // Start countdown timer to start race
-        else {
-            CountdownTimer -= Time.deltaTime;
-            if (CountdownTimer <= 0) {
-                IsRaceActive = true;
+
+        if (IsGameStarted) {
+            // Increment the timer while the race is happening
+            if (IsRaceActive && !IsRaceFinished) {
+                Timer += Time.deltaTime;
+            }
+            // Start countdown timer to start race
+            else {
+                CountdownTimer -= Time.deltaTime;
+                if (CountdownTimer <= 0) {
+                    IsRaceActive = true;
+                }
             }
         }
+        // Start the game with this
+        else if (Input.GetKeyDown(startRaceKey)) {
+            IsGameStarted = true;
+        }
+        
     }
 
     public void StartRace() {
@@ -44,11 +57,13 @@ public class GameManager : MonoBehaviour {
 
     public void EndRace() {
         IsRaceActive = false;
+        IsRaceFinished = true;
     }
 
     public void Reset() {
         Timer = 0;
         IsRaceActive = false;
+        IsRaceFinished = false;
     }
 
 }
