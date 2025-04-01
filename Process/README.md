@@ -273,3 +273,36 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 - Collectibles
     - I wasn't able to make it this iteration, but having collectibles along the racetrack could be interesting
     - They could benefit the racer in some way or be required to finish the race
+
+## Iterative Prototype 4
+- What might a finalized version look like?
+- Goals
+  - [x] new skybox
+  - [x] building texture
+  - [x] racer model
+  - [ ] ui images
+  - [x] road texture
+  - [x] billboard texture
+  - [ ] update out of bounds logic
+  - [ ] sound effects
+  - [ ] music
+
+### Implementation
+
+<img src="./Media/iteration5_img1.png" width="800">
+
+- I added a textures to the roads, buildings, billboards, and skybox
+    - *all of this is to have a more final look for the game*
+
+<img src="./Media/iteration5_img2.png" width="800">
+
+- The racer has a new model
+    - *This will help to see what a bouncing race car might look like*
+    - *Blender was used to model and texture the race car*
+- The visual style
+    - I decided on making it a f-zero inspired future racer
+    - The oppresive environment helps to express the challenge that the race poses
+
+### Reflection
+
+### Ideas for next iteration  
