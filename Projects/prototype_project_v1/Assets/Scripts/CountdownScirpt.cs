@@ -28,7 +28,7 @@ public class CountdownScirpt : MonoBehaviour
         // Change the message when countdown turns 0
         else if (GameManager.S.IsRaceActive) {
             countdownString = "GO!";
-            countdownText.transform.position = new Vector3(countdownText.transform.position.x, countdownText.transform.position.y + 0.5f, countdownText.transform.position.z);
+            countdownText.transform.position = new Vector3(countdownText.transform.position.x, countdownText.transform.position.y + (250f * Time.deltaTime), countdownText.transform.position.z);
         }
 
         // Add the string to our ui text

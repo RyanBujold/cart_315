@@ -12,7 +12,7 @@ public class BouncerPlacer : MonoBehaviour
     public KeyCode rotateRightKey, rotateLeftKey, resetKey;
 
     private const float distanceFromCamera = 30f;
-    private const float rotationAmount = 0.5f;
+    private const float rotationAmount = 200f;
     private const float minPositionY = 1f;
     private List<GameObject> bouncers;
 
@@ -50,10 +50,10 @@ public class BouncerPlacer : MonoBehaviour
 
         // Rotate bouncer placement
         if(Input.GetKey(rotateLeftKey)) {
-            transform.Rotate(0, rotationAmount, 0, Space.Self);
+            transform.Rotate(0, rotationAmount * Time.deltaTime, 0, Space.Self);
         }
         if (Input.GetKey(rotateRightKey)) {
-            transform.Rotate(0, -rotationAmount, 0, Space.Self);
+            transform.Rotate(0, -rotationAmount * Time.deltaTime, 0, Space.Self);
         }
 
     }

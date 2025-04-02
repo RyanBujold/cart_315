@@ -5,6 +5,10 @@ using UnityEngine;
 public class Racer : MonoBehaviour
 {
     public KeyCode driveKey, restartKey;
+    public AudioSource au;
+    public AudioSource engine;
+    public AudioClip crashSound;
+    public AudioClip bounceSound;
     public float driveSpeed = 0;
 
     private Rigidbody rb;
@@ -47,6 +51,10 @@ public class Racer : MonoBehaviour
             rb.velocity = new Vector3(0, 0, 0);
         }
 
+        // Match engine pitch to speed
+        //200x -3y = 0
+        engine.pitch = (3 * GetCurrentVelocity())/200;
+
     }
 
     public float GetCurrentVelocity(){
@@ -60,7 +68,11 @@ public class Racer : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         // did we hit an obstacle
         if (other.gameObject.tag == "Obstacle") {
+            au.PlayOneShot(crashSound,8f);
             Lose();
+        }
+        if(other.gameObject.tag == "Bouncer") {
+            au.PlayOneShot(bounceSound, 10f);
         }
     }
 

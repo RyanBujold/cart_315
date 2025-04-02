@@ -284,12 +284,12 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
   - [x] road texture
   - [x] billboard texture
   - [ ] update out of bounds logic
-  - [ ] sound effects
-  - [ ] music
+  - [x] sound effects
+  - [x] music
 
 ### Implementation
 
-<img src="./Media/iteration5_img1.png" width="800">
+
 
 - I added a textures to the roads, buildings, billboards, and skybox
     - *all of this is to have a more final look for the game*
@@ -299,9 +299,18 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 - The racer has a new model
     - *This will help to see what a bouncing race car might look like*
     - *Blender was used to model and texture the race car*
+
+<img src="./Media/iteration5_img1.png" width="800">
+
 - The visual style
     - I decided on making it a f-zero inspired future racer
     - The oppresive environment helps to express the challenge that the race poses
+
+### Credits
+- Here are some of the ressources used for the sounds
+    - jsfxr for crash win and bounce sounds
+    - https://freesound.org/people/qubodup/sounds/187734/ for engine sounds
+    - https://opengameart.org/content/zodik-future-travel for the music
 
 ### Reflection
 
