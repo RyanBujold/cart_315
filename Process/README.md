@@ -278,6 +278,7 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 
 <img src="./Media/iteration5_vid1.gif" width = "800">
 
+### Question
 - What might a finalized version look like?
 - Goals
   - [x] new skybox
@@ -321,12 +322,44 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
     - https://freesound.org/people/qubodup/sounds/187734/ for engine sounds
     - https://opengameart.org/content/zodik-future-travel for the music
 
+### Feedback 
+- The ability to slow down would be nice
+- Maybe you could find some way to make placing the bouncers not go bellow the track
+
 ### Reflection
 - I like the how the game looks and sounds
 - The themes and visuals come together nicely
+- I do think balance wise it could be a bit easier but to compensate I would probably make the track longer
 
 ### Ideas for next iteration  
 - More levels?
 - Updated visuals?
 - Main menu?
 - Story cutscenes?
+- Title
+- New mechanics?
+
+## Final Iteration
+
+### Question
+- How can I refine the game into a vertical slice?
+- Goals
+  - [ ] Title
+  - [ ] Increase the lenght of the track
+  - [ ] Add dynamic lighting effects
+  - [ ] Update controls
+  - [ ] Fix bouncer placer going beneath the track
+  - [x] Allow the player to slow down manually
+  - [ ] Add new obstacles
+  - [x] Update the out of bounds logic
+  - [ ] Collectible items
+  - [ ] Balance adjustments and level design changes
+
+### Implementation
+- I update the out of bounds logic
+  - *This is to make sure players don't fly endlessly out of bounds and I don't have to rely on a kill floor*
+- The player can now press the brake button to slow themselves down
+  - *This gives players more control over the racer to better tackle the challenges*
+  - *Depending on feedback, this feature may be temporary*
+
+### Reflection

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Racer : MonoBehaviour
 {
-    public KeyCode driveKey, restartKey;
+    public KeyCode driveKey, brakeKey,restartKey;
     public AudioSource au;
     public AudioSource engine;
     public AudioClip crashSound;
@@ -29,7 +29,11 @@ public class Racer : MonoBehaviour
         if (GameManager.S.IsRaceActive) {
             // When drive key pressed, move the racer forward
             if (Input.GetKey(driveKey)) {
-                rb.velocity += ((transform.forward * driveSpeed) * Time.deltaTime);
+                AddVelocity((transform.forward * driveSpeed) * Time.deltaTime);
+            }
+            // When brake key pressed, slow down the racer
+            if(Input.GetKey(brakeKey)) {
+                Brake();
             }
             // When restart key pressed, restart game
             if (Input.GetKey(restartKey)) {
@@ -65,6 +69,10 @@ public class Racer : MonoBehaviour
         rb.velocity += vector;
     }
 
+    private void Brake() {
+        rb.velocity /= (1.005f);
+    }
+
     private void OnCollisionEnter(Collision other) {
         // did we hit an obstacle
         if (other.gameObject.tag == "Obstacle") {
@@ -83,7 +91,7 @@ public class Racer : MonoBehaviour
         rb.angularVelocity = new Vector3(0f, 0f, 0f);
     }
 
-    private void Lose() {
+    public void Lose() {
         Reset();
         GameManager.S.Reset();
     }

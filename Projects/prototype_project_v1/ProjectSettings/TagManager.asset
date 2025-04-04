@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - WindBox
   - Racer
+  - Bounds
   layers:
   - Default
   - TransparentFX
