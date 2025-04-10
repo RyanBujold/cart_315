@@ -15,6 +15,11 @@ public class GameManager : MonoBehaviour {
     public bool IsRaceActive { get; private set; }
     public bool IsGameStarted { get; private set; }
     public bool IsRaceFinished {  get; private set; }
+    public int PointTotal { get; private set; }
+
+    public AudioSource Au;
+    public AudioClip pointSound;
+    public Transform collectibles;
 
     private const float STARTING_COUNTDOWN_TIME = 3;
 
@@ -51,6 +56,11 @@ public class GameManager : MonoBehaviour {
         
     }
 
+    public void AddPoints(int p) {
+        PointTotal += p;
+        Au.PlayOneShot(pointSound, 10f);
+    }
+
     public void StartRace() {
         IsRaceActive = true;
     }
@@ -62,8 +72,17 @@ public class GameManager : MonoBehaviour {
 
     public void Reset() {
         Timer = 0;
+        PointTotal = 0;
         IsRaceActive = false;
         IsRaceFinished = false;
+
+        // Reset the collectibles
+        foreach (Transform child in collectibles) {
+            if (child.gameObject.tag == "Cheese") {
+                child.gameObject.SetActive(true);
+            }
+        }
+
     }
 
 }

@@ -9,6 +9,7 @@ TagManager:
   - WindBox
   - Racer
   - Bounds
+  - Cheese
   layers:
   - Default
   - TransparentFX

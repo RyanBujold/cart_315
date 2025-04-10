@@ -339,21 +339,21 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 - Title
 - New mechanics?
 
-## Final Iteration
+## Final Iteration - "Rodent Rebound"
 
 ### Question
-- How can I refine the game into a vertical slice?
+- How can I polish the game into a vertical slice?
 - Goals
-  - [ ] Title
-  - [ ] Increase the lenght of the track
-  - [ ] Add dynamic lighting effects
-  - [ ] Update controls
+  - [x] Title
+  - [x] Increase the lenght of the track
+  - [x] Add dynamic lighting effects
+  - [x] Update controls
   - [ ] Fix bouncer placer going beneath the track
   - [x] Allow the player to slow down manually
   - [ ] Add new obstacles
   - [x] Update the out of bounds logic
-  - [ ] Collectible items
-  - [ ] Balance adjustments and level design changes
+  - [x] Collectible items
+  - [x] Balance adjustments and level design changes
 
 ### Implementation
 - I update the out of bounds logic
@@ -361,5 +361,15 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
 - The player can now press the brake button to slow themselves down
   - *This gives players more control over the racer to better tackle the challenges*
   - *Depending on feedback, this feature may be temporary*
+- The title for the game is now "Rodent Rebound"
+- The track was extended a bit
+    - *Adds more challenge to the race by making it last a bit longer*
+- Added some collectible items
+    - *This is to make the game more challenging and more replayable for high scores*
+- Added dynamic lights
+    - *This is to enhance the visuals of the game to make it closer to a final version*
+
+### Feedback
+
 
 ### Reflection
