@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     
     public static GameManager S;
 
-    public readonly float GOAL_TIME = 75;
+    public readonly float GOAL_TIME = 180;
 
     public float Timer { get; private set; }
     public float CountdownTimer { get; private set; }

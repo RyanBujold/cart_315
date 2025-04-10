@@ -370,6 +370,10 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
     - *This is to enhance the visuals of the game to make it closer to a final version*
 
 ### Feedback
-
+- mouse scroll to rotate placer
+- more time on race
+- lock placer y axis to the racer?
+- Add a max speed to racer?
+- Motion sickness from camera?
 
 ### Reflection
