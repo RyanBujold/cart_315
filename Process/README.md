@@ -370,10 +370,25 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
     - *This is to enhance the visuals of the game to make it closer to a final version*
 
 ### Feedback
-- mouse scroll to rotate placer
-- more time on race
-- lock placer y axis to the racer?
-- Add a max speed to racer?
-- Motion sickness from camera?
+- [x]mouse scroll to rotate placer
+- [x]more time on race
+- [x]lock placer y axis to the racer?
+- [ ]Add a max speed to racer?
+- [ ]Fix motion sickness from camera? 
 
 ### Reflection
+- The idea ended up being way more enjoyable and interesting that I thought
+- The greatest compliment I got during feedback was that a full version of this game would be an instant steam purchase for them
+- This idea is simple but is full of potential
+- It seems that with time and polish, this could be a fun little game
+- I now have to consider whether I want to put in the extra work to make a more complete product and deploy it to the public
+
+### Ideas for the future
+- Having the camera and bouncer placer be positioned wherever the player is heading velocity wise
+- more complex tracks and races
+- items, mechanics, more
+- better visuals
+- multiple camera modes
+- more worldbuilding
+- difficulty settings
+- time trial ghosts

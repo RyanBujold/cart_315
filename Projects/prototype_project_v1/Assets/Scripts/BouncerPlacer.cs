@@ -13,7 +13,7 @@ public class BouncerPlacer : MonoBehaviour
 
     private const float distanceFromCamera = 30f;
     private const float rotationAmount = 200f;
-    private const float minPositionY = 1f;
+    private float minPositionY = 0f;
     private List<GameObject> bouncers;
 
     private bool mouseCliked = false;
@@ -30,6 +30,7 @@ public class BouncerPlacer : MonoBehaviour
         // Turn the mouse position on the screen into a position in the world
         transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distanceFromCamera));
         // Make sure position doesn't drop too low
+        minPositionY = Racer.transform.position.y;
         if(transform.position.y < minPositionY) {
             transform.position = new Vector3(transform.position.x, minPositionY, transform.position.z);
         }
@@ -48,12 +49,19 @@ public class BouncerPlacer : MonoBehaviour
             DestroyAllBouncers();
         }
 
-        // Rotate bouncer placement
+        // Rotate with keys
         if(Input.GetKey(rotateLeftKey)) {
             transform.Rotate(0, rotationAmount * Time.deltaTime, 0, Space.Self);
         }
         if (Input.GetKey(rotateRightKey)) {
             transform.Rotate(0, -rotationAmount * Time.deltaTime, 0, Space.Self);
+        }
+        // Rotate with scroll wheel
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) {
+            transform.Rotate(0, rotationAmount * Time.deltaTime * 20, 0, Space.Self);
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f) {
+            transform.Rotate(0, -rotationAmount * Time.deltaTime * 20, 0, Space.Self);
         }
 
     }
