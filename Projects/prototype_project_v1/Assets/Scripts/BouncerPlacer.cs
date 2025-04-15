@@ -58,10 +58,10 @@ public class BouncerPlacer : MonoBehaviour
         }
         // Rotate with scroll wheel
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) {
-            transform.Rotate(0, rotationAmount * Time.deltaTime * 20, 0, Space.Self);
+            transform.Rotate(0, rotationAmount * Time.deltaTime * 10, 0, Space.Self);
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0f) {
-            transform.Rotate(0, -rotationAmount * Time.deltaTime * 20, 0, Space.Self);
+            transform.Rotate(0, -rotationAmount * Time.deltaTime * 10, 0, Space.Self);
         }
 
     }

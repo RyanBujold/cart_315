@@ -356,25 +356,54 @@ cars, f-1, time trials, race tracks, maps, environments, racers, custimization, 
   - [x] Balance adjustments and level design changes
 
 ### Implementation
+
+<img src="./Media/finalIteration_img4.png" width="800">
+
 - I update the out of bounds logic
   - *This is to make sure players don't fly endlessly out of bounds and I don't have to rely on a kill floor*
+  ```
+    private void OnTriggerExit(Collider other) {
+        if (other.gameObject.tag == "Racer") {
+            Racer temp = (Racer) other.GetComponent(typeof(Racer));
+            temp.Lose();
+        }
+    }
+  ```
 - The player can now press the brake button to slow themselves down
   - *This gives players more control over the racer to better tackle the challenges*
   - *Depending on feedback, this feature may be temporary*
 - The title for the game is now "Rodent Rebound"
+
+<img src="./Media/finalIteration_img2.png" width="800">
+
 - The track was extended a bit
     - *Adds more challenge to the race by making it last a bit longer*
+
+<img src="./Media/finalIteration_img3.png" width="800">
+
 - Added some collectible items
     - *This is to make the game more challenging and more replayable for high scores*
+
+<img src="./Media/finalIteration_img1.png" width="800">
+
 - Added dynamic lights
     - *This is to enhance the visuals of the game to make it closer to a final version*
 
 ### Feedback
+(Checkmarked items were implemented)
 - [x]mouse scroll to rotate placer
+    - *More intuitive controls*
 - [x]more time on race
+    - *Making the challenge a bit more relaxed for new players*
 - [x]lock placer y axis to the racer?
+    - *Makes it so the placer doesn't go below the track all the time*
 - [ ]Add a max speed to racer?
+    - *I want to keep the high speeds because it adds player agency to the difficulty (higher speed = harder control = greater time = greater reward)*
 - [ ]Fix motion sickness from camera? 
+    - *Not enough time to implement*
+
+### Game Link
+The final game can be played [here](https://rivalbug.itch.io/rodent-rebound)
 
 ### Reflection
 - The idea ended up being way more enjoyable and interesting that I thought
